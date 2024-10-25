@@ -11,8 +11,12 @@ const config: Config = {
   theme: {
     container: {
       center: true,
+
       screens: {
-        '2xl': '1200px',
+        sm: '100%',
+        md: '100%',
+        lg: '940px',
+        xl: '1200px',
       },
     },
     extend: {

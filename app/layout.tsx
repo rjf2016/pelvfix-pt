@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { DM_Sans, Libre_Baskerville } from 'next/font/google';
-import Image from 'next/image';
+import { DM_Sans, Playfair_Display } from 'next/font/google';
+import { cn } from '@/lib/utils';
+
 import './globals.css';
 
-import PelvfixSvg from '../public/pelvfix.svg';
-import { Button } from '@/components/ui/button';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 const sans = DM_Sans({
   subsets: ['latin'],
@@ -12,8 +13,8 @@ const sans = DM_Sans({
   variable: '--font-sans',
 });
 
-const serif = Libre_Baskerville({
-  weight: ['400', '700'],
+const serif = Playfair_Display({
+  weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-serif',
@@ -30,35 +31,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-background">
+    <html lang="en">
       <body
-        className={`${sans.variable} ${serif.variable} antialiased bg-background`}
+        className={cn('font-sans antialiased', sans.variable, serif.variable)}
       >
-        {/* <Navbar>
-          <Image
-            src={PelvfixSvg}
-            alt="PelvFix Logo"
-            className="object-contain h-6 w-auto"
-          />
-          <MenuIcon size={24} className="text-black" />
-        </Navbar> */}
-
-        <header className={'w-full bg-muted'}>
-          <nav className="container mx-auto px-4 py-3">
-            <div className="flex justify-between items-center">
-              <Image
-                src={PelvfixSvg}
-                alt="PelvFix Logo"
-                className="object-contain h-6 w-auto"
-              />
-              {/* contact button */}
-              <Button size={'sm'} variant={'ghost'}>
-                Contact
-              </Button>
-            </div>
-          </nav>
-        </header>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

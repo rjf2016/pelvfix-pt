@@ -1,39 +1,44 @@
 import Image from 'next/image';
-import YogaImg from '../public/unsplash-yoga.jpg';
 import PregnantYoga from '../public/pregnant-yoga.jpg';
+import BallYoga from '../public/unsplash-ball.jpg';
 import { Button } from '@/components/ui/button';
+import Testimonials from '@/components/testimonials';
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen flex flex-col">
+    <main className="flex flex-col bg-white pb-12">
       {/* Hero Section */}
-      <section className="bg-muted p-4 md:min-h-[50vh] flex flex-col justify-center">
-        <div className="container w-full flex flex-col-reverse md:flex-row md:items-center gap-4">
-          <div className="w-full flex flex-col px-4 space-y-6 py-8">
-            <div className="w-full flex flex-col justify-center text-center space-y-1 md:text-left md:text-lg text-black">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-balance">
-                Pelvic Floor Rehab & Wellness
-              </h1>
-              <h6 className="text-foreground">
-                Mobile Pelvic Floor Physical Therapy Clinic (Central, NJ)
-              </h6>
-              <h6 className="font-medium pt-4 text-lg">
-                Dr. Suzanne Chedid, PT, DPT, PCES
-              </h6>
-            </div>
-            <Button className="w-40 mx-auto md:mx-0">Schedule</Button>
+      <section className="bg-muted py-6">
+        <div className="container px-6 flex flex-col items-center justify-center gap-y-8 lg:justify-between lg:flex-row min-h-[50vh]">
+          <div className="space-y-2 md:space-y-2 text-center lg:text-left max-w-[500px]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-balance text-black font-serif">
+              Pelvic Floor Rehab
+              <span className="text-3xl md:text-4xl lg:text-5xl">{' & '}</span>
+              Wellness
+            </h1>
+            <h6 className="text-pretty">
+              Mobile Pelvic Floor Physical Therapy Clinic (Central, NJ)
+            </h6>
+            <h6 className="font-medium text-black pb-4">
+              Dr. Suzanne Chedid, PT, DPT, PCES
+            </h6>
+            <Button size={'lg'} className="w-40">
+              Schedule
+            </Button>
           </div>
+
           <Image
-            src={YogaImg}
+            src={BallYoga}
             alt="hero"
-            className="rounded-xl w-full md:w-1/3 max-h-[400px] md:max-h-none object-cover"
+            // sizes="100vw"
+            className="hidden md:block rounded-xl object-contain h-auto w-full max-w-[400px] lg:max-w-none lg:w-[45%]"
           />
         </div>
       </section>
 
       {/* Promise Section */}
-      <section className="container space-y-4 px-4 py-8 min-h-[50vh] md:min-h-[40vh] lg:min-h-[30vh] flex flex-col justify-center border-b">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-black">
+      <section className="container space-y-4 px-6 py-12 md:py-16 lg:py-20">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-black font-medium">
           The PelvFix Promise
         </h2>
         <p className="leading-relaxed md:text-lg">
@@ -45,9 +50,14 @@ export default function Home() {
         </p>
       </section>
 
+      <div className="w-3/5 max-w-96 mx-auto h-0.5 bg-muted" />
+
       {/* Conditions Section */}
-      <section className="container space-y-4 px-4 py-8 min-h-[50vh] md:min-h-[40vh] lg:min-h-[30vh] flex flex-col justify-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-black">
+      <section
+        className="container space-y-4 px-6 py-12 md:py-16 lg:py-20"
+        id="treatments"
+      >
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-black font-medium">
           Conditions We Treat
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -58,7 +68,7 @@ export default function Home() {
               className="rounded-xl brightness-[33%]"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white md:text-lg font-medium text-center">
+              <p className="text-muted md:text-lg font-medium text-center">
                 Pregnancy & Postpartum
               </p>
             </div>
@@ -70,7 +80,7 @@ export default function Home() {
               className="rounded-xl brightness-[33%]"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white md:text-lg font-medium text-center">
+              <p className="text-muted md:text-lg font-medium text-center">
                 Pelvic Pain
               </p>
             </div>
@@ -82,7 +92,7 @@ export default function Home() {
               className="rounded-xl brightness-[33%]"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white md:text-lg font-medium text-center">
+              <p className="text-muted md:text-lg font-medium text-center">
                 Bowel & Bladder
               </p>
             </div>
@@ -94,7 +104,7 @@ export default function Home() {
               className="rounded-xl brightness-[33%]"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <p className="text-white md:text-lg font-medium text-center">
+              <p className="text-muted md:text-lg font-medium text-center">
                 Other
               </p>
             </div>
@@ -102,16 +112,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container space-y-4 p-4 pt-16 pb-8 md:pt-20 md:pb-10 lg:pt-24 lg:pb-12 xl:pt-28">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-black">
-          Lorem Ipsum
+      <div className="w-3/5 max-w-96 mx-auto h-0.5 bg-muted" />
+
+      {/* Testimonials Section */}
+      <section
+        className="container space-y-4 px-6 py-12 md:py-16 lg:py-20"
+        id="testimonials"
+      >
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-black font-medium">
+          Testimonials
         </h2>
-        <p className="leading-relaxed md:text-lg">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde libero
-          molestiae voluptates incidunt. Commodi eaque nisi minus incidunt
-          expedita corporis recusandae alias. Eveniet ad nesciunt animi minima
-          ratione. Dolorem, soluta.
-        </p>
+        <div className="w-full overflow-x-hidden">
+          <Testimonials />
+        </div>
       </section>
     </main>
   );
