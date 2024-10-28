@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MenuIcon } from 'lucide-react';
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 import {
   Sheet,
@@ -13,60 +14,52 @@ import {
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
+import { NAV_LINKS } from '@/lib/data';
 import PelvfixSvg from '../public/pelvfix.svg';
-import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
-
-const NavLinks = [
-  {
-    title: 'Treatments',
-    href: '#treatments',
-  },
-  {
-    title: 'About Us',
-    href: '#about',
-  },
-  {
-    title: 'Testimonials',
-    href: '#testimonials',
-  },
-  {
-    title: 'Contact',
-    href: '#contact',
-  },
-];
 
 export default function Navbar() {
   return (
-    <header className={'w-full bg-muted'}>
-      <nav className="container mx-auto py-3 px-6">
+    <header className={'w-full bg-muted sticky top-0 z-50'}>
+      <nav className="container mx-auto px-4 py-2 lg:py-4">
         <div className="flex justify-between items-center">
-          <Image
-            src={PelvfixSvg}
-            alt="PelvFix Logo"
-            className="h-5 lg:h-6 w-auto"
-          />
-          <div className="hidden lg:flex items-center gap-x-4 text-lg text-black h-10">
-            {NavLinks.map((link) => (
-              <Link
+          <Button variant={'link'} asChild className="px-2">
+            <Link href={'/'}>
+              <Image
+                src={PelvfixSvg}
+                alt="PelvFix Logo"
+                className="h-5 w-auto"
+                priority
+              />
+            </Link>
+          </Button>
+          <div className="hidden lg:flex items-center gap-x-4 text-black">
+            {NAV_LINKS.map((link) => (
+              <Button
+                asChild
                 key={link.title}
-                href={link.href}
-                prefetch={false}
-                scroll={false}
-                className="hover:bg-white transition-colors py-1 px-2 rounded-xl"
+                variant={'ghost'}
+                className="h-full"
               >
-                {link.title}
-              </Link>
+                <Link
+                  href={link.href}
+                  className="no-underline hover:no-underline"
+                >
+                  {link.title}
+                </Link>
+              </Button>
             ))}
+            <Button asChild className="h-full">
+              <Link href={'/contact'}>Contact</Link>
+            </Button>
           </div>
 
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">
               <Button
                 variant={'ghost'}
-                size={'icon'}
-                className="ring-transparent lg:hidden focus-visible:ring-transparent ring-offset-transparent focus-visible:bg-black/10"
+                className="ring-transparent lg:hidden focus-visible:ring-transparent ring-offset-transparent focus-visible:bg-black/10 h-6 w-6 p-0 mr-2"
               >
-                <MenuIcon className="h-6 w-auto" />
+                <MenuIcon />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
@@ -82,18 +75,19 @@ export default function Navbar() {
                 </SheetHeader>
               </VisuallyHidden>
               <div className="text-lg text-black flex flex-col gap-y-4 pt-12">
-                {NavLinks.map((link) => (
+                {NAV_LINKS.map((link) => (
                   <SheetClose asChild key={link.title}>
                     <Link
                       href={link.href}
-                      prefetch={false}
-                      scroll={false}
                       className="hover:underline text-lg text-black w-fit"
                     >
                       {link.title}
                     </Link>
                   </SheetClose>
                 ))}
+                <SheetClose asChild>
+                  <Link href={'/contact'}>Contact</Link>
+                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>

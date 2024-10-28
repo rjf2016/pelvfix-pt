@@ -6,6 +6,7 @@ import './globals.css';
 
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import { Toaster } from '@/components/ui/toaster';
 
 const sans = DM_Sans({
   subsets: ['latin'],
@@ -35,9 +36,12 @@ export default function RootLayout({
       <body
         className={cn('font-sans antialiased', sans.variable, serif.variable)}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow bg-white flex flex-col">{children}</main>
+          <Footer />
+        </div>
+        <Toaster />
       </body>
     </html>
   );
