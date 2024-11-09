@@ -16,16 +16,16 @@ type TestimonialData = {
 
 function TestimonalCard(testimonal: TestimonialData) {
   return (
-    <Card className="h-full">
+    <Card className="h-full bg-muted/50 border-none rounded-xl shadow-none">
       <CardContent className="p-6 h-full flex flex-col justify-between gap-y-4 text-pretty text-sm md:text-base">
         <div className="flex gap-x-0.5 justify-center">
           {[...Array(testimonal.rating)].map((_, index) => (
             <StarIcon
               key={index}
               size={18}
-              stroke="#FFBC00"
+              stroke="#FFBF54"
               strokeWidth={2.5}
-              fill="#FFBC00"
+              fill="#FFBF54"
             />
           ))}
         </div>

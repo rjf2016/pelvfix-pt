@@ -32,13 +32,13 @@ export default function Navbar() {
               />
             </Link>
           </Button>
-          <div className="hidden lg:flex items-center gap-x-4 text-black">
+          <div className="hidden lg:flex items-center gap-x-6 text-primary">
             {NAV_LINKS.map((link) => (
               <Button
                 asChild
                 key={link.title}
                 variant={'ghost'}
-                className="h-full"
+                className="h-full min-w-[88px]"
               >
                 <Link
                   href={link.href}
@@ -74,12 +74,12 @@ export default function Navbar() {
                   </SheetDescription>
                 </SheetHeader>
               </VisuallyHidden>
-              <div className="text-lg text-black flex flex-col gap-y-4 pt-12">
+              <div className="text-lg text-primary flex flex-col gap-y-4 pt-12">
                 {NAV_LINKS.map((link) => (
                   <SheetClose asChild key={link.title}>
                     <Link
                       href={link.href}
-                      className="hover:underline text-lg text-black w-fit"
+                      className="hover:underline text-lg text-primary w-fit"
                     >
                       {link.title}
                     </Link>

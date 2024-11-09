@@ -12,7 +12,7 @@ export default function ContactPage() {
     <div className="container flex flex-col px-6 py-12">
       <Card className="max-w-xl w-full mx-auto">
         <CardHeader>
-          <CardTitle className="text-black">Contact Us</CardTitle>
+          <CardTitle className="text-primary">Contact Us</CardTitle>
           <CardDescription>
             Got a question for us? Fill out the form below and I will get back
             to you within 24 hours.

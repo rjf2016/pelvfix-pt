@@ -1,6 +1,6 @@
 'use client';
 
-import * as React from 'react';
+import { memo, useMemo } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Accordion,
@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 interface TabData {
   title: string;
@@ -38,43 +39,61 @@ const tabData: TabData[] = [
   },
 ];
 
-export default function Services() {
+const Services = memo(() => {
+  const memoizedTabData = useMemo(() => tabData, []);
+
   return (
     <div className="w-full">
       {/* Horizontal Tabs for large screens */}
-      <Tabs defaultValue="Pelvic Pain" className="hidden md:block">
-        <TabsList className="grid w-full grid-cols-4 border-x border-t rounded-b-none">
-          {tabData.map((tab) => (
+      <Tabs
+        defaultValue="Pelvic Pain"
+        className="hidden md:block rounded-xl bg-background overflow-hidden border border-muted"
+      >
+        <TabsList className="grid w-full grid-cols-4 overflow-hidden">
+          {memoizedTabData.map((tab) => (
             <TabsTrigger key={tab.title} value={tab.title}>
               {tab.title}
             </TabsTrigger>
           ))}
         </TabsList>
-        {tabData.map((tab) => (
+        {memoizedTabData.map((tab) => (
           <TabsContent
             key={tab.title}
             value={tab.title}
-            className="p-6 py-8 mt-0 bg-background border rounded-b-xl"
+            className="p-10 mt-0 leading-relaxed lg:text-lg rounded-xl"
           >
             {tab.content}
           </TabsContent>
         ))}
       </Tabs>
 
-      {/* Vertical Accordion-like Tabs for small screens */}
+      {/* Vertical Accordion for small screens */}
       <Accordion type="single" collapsible className="md:hidden w-full">
-        {tabData.map((tab) => (
-          <AccordionItem key={tab.title} value={tab.title}>
+        {memoizedTabData.map((tab) => (
+          <AccordionItem
+            key={tab.title}
+            value={tab.title}
+            className="text-primary"
+          >
             <AccordionTrigger className="text-left">
               {tab.title}
             </AccordionTrigger>
-            <AccordionContent>{tab.content}</AccordionContent>
+            <AccordionContent className="text-foreground">
+              {tab.content}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
-      <div className="flex justify-center mt-4">
-        <Button className="w-44">View All</Button>
+      <div className="flex justify-center mt-8">
+        <Button className="w-44 gap-x-1">
+          View All
+          <ArrowRight className="h-4 w-4 -mr-2" />
+        </Button>
       </div>
     </div>
   );
-}
+});
+
+Services.displayName = 'Services';
+
+export default Services;

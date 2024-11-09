@@ -179,7 +179,7 @@ export default function ContactForm() {
                             }}
                           />
                         </FormControl>
-                        <FormLabel className="font-normal text-black cursor-pointer">
+                        <FormLabel className="font-normal text-primary cursor-pointer">
                           {referral.label}
                         </FormLabel>
                       </FormItem>

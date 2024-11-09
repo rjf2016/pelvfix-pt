@@ -4,27 +4,22 @@
 
 html,
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* :root {
-  --background: #fff8f0;
-  --foreground: #171717;
-  --primary: #707c58;
-  --olive: #09371f;
-  --muted: #f7ecdb;
-} */
-
 :root {
   --background: 0 0% 100%;
   --foreground: 0 0% 36%;
+  /* --primary: 195 46% 5%; */
+  --primary: 0 0% 0%;
   --muted: 43 30% 95%;
   --radius: 0.5rem;
 }
 
 @layer base {
   body {
-    @apply bg-muted text-foreground;
+    @apply bg-background text-foreground;
   }
 }
