@@ -9,8 +9,8 @@ import {
 
 export default function ContactPage() {
   return (
-    <div className="container flex flex-col px-6 py-12">
-      <Card className="max-w-xl w-full mx-auto">
+    <div className="container flex flex-col px-2 py-12">
+      <Card className="max-w-xl w-full mx-auto shadow-none border-none">
         <CardHeader>
           <CardTitle className="text-primary">Contact Us</CardTitle>
           <CardDescription>

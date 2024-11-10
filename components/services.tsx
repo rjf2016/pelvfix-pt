@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface TabData {
   title: string;
@@ -84,10 +85,12 @@ const Services = memo(() => {
           </AccordionItem>
         ))}
       </Accordion>
-      <div className="flex justify-center mt-8">
-        <Button className="w-44 gap-x-1">
-          View All
-          <ArrowRight className="h-4 w-4 -mr-2" />
+      <div className="flex justify-center mt-4">
+        <Button className="w-44 gap-x-1" asChild>
+          <Link href={'/about#treatments'}>
+            View All
+            <ArrowRight className="h-4 w-4 -mr-2" />
+          </Link>
         </Button>
       </div>
     </div>
