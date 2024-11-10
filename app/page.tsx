@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <div className="mb-16">
       {/* Hero Section */}
-      <section className="relative bg-muted py-6 overflow-x-hidden">
-        <div className="container px-4 flex flex-col items-center justify-center gap-y-8 lg:justify-between lg:flex-row min-h-[450px] md:min-h-[650px] lg:min-h-[760px]">
+      <section className="relative bg-muted overflow-x-hidden">
+        <div className="container px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 lg:justify-between lg:flex-row min-h-[450px] md:min-h-[650px] lg:min-h-[760px]">
           <div className="space-y-4 text-center lg:text-left max-w-[500px]">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-balance text-primary font-serif">
               Pelvic Floor Rehab
