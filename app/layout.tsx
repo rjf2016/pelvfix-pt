@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://pelvfixpt.com/og-logo.png',
+        url: 'https://pelvfixpt.com/og-logo.jpg',
         height: 736,
         width: 736,
       },
