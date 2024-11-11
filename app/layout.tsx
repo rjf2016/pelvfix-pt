@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { DM_Sans, Playfair_Display } from 'next/font/google';
 import { cn } from '@/lib/utils';
@@ -59,6 +60,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
