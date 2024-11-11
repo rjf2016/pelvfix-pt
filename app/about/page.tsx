@@ -1,8 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
 import { TREATMENTS } from '@/lib/data';
 import DoctorImg from '../../public/doctor.jpg';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export default function AboutPage() {
   return (

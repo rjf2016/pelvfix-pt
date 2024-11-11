@@ -10,14 +10,15 @@ import Prenatal from '../public/prenatal.jpg';
 import PhoneIcon from '../public/phone-icon.svg';
 import HomeIcon from '../public/home-icon.svg';
 import HappyIcon from '../public/happy-icon.svg';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <div className="mb-16">
       {/* Hero Section */}
-      <section className="relative bg-muted overflow-x-hidden">
+      <section className="relative bg-muted pb-6 overflow-x-hidden">
         <div className="container px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 lg:justify-between lg:flex-row min-h-[450px] md:min-h-[650px] lg:min-h-[760px]">
-          <div className="space-y-4 text-center lg:text-left max-w-[500px]">
+          <div className="space-y-4 text-center lg:text-left max-w-[500px] z-20">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-balance text-primary font-serif">
               Pelvic Floor Rehab
               <span className="text-3xl md:text-4xl lg:text-5xl">{' & '}</span>
@@ -27,8 +28,8 @@ export default function Home() {
               One on one, personalized care in the comfort of your home. Based
               in Central NJ.
             </p>
-            <Button size={'lg'} className="w-1/2 max-w-40">
-              Schedule
+            <Button size={'lg'} className="w-1/2 max-w-40" asChild>
+              <Link href={'/contact'}>Schedule</Link>
             </Button>
           </div>
           <Image

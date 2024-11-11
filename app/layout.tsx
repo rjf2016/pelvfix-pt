@@ -22,8 +22,25 @@ const serif = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'PelvFix PT',
+  title: { default: 'PelvFix PT', template: '%s | PelvFix PT' },
   description: 'Pelvic Floor Physical Therapy',
+  keywords: 'Pelvic Floor, Physical Therapy, Health, Wellness, NJ, Women',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'PelvFix PT',
+    description: 'Pelvic Floor Physical Therapy',
+    url: 'https://pelvfixpt.com',
+    siteName: 'PelvFix PT',
+    type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://pelvfixpt.com/og-logo.png',
+        height: 736,
+        width: 736,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

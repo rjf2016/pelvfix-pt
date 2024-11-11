@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import {
   Accordion,
   AccordionContent,
@@ -5,6 +6,10 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { FAQS } from '@/lib/data';
+
+export const metadata: Metadata = {
+  title: 'FAQs',
+};
 
 export default function FaqsPage() {
   return (
