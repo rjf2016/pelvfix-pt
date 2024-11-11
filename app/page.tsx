@@ -5,7 +5,6 @@ import Testimonials from '@/components/testimonials';
 import Services from '@/components/services';
 
 import Wave from '../public/wave.svg';
-import BallYoga from '../public/unsplash-ball.jpg';
 import Prenatal from '../public/prenatal.jpg';
 import PhoneIcon from '../public/phone-icon.svg';
 import HomeIcon from '../public/home-icon.svg';
@@ -17,27 +16,21 @@ export default function Home() {
     <div className="mb-16">
       {/* Hero Section */}
       <section className="relative bg-muted pb-6 overflow-x-hidden">
-        <div className="container px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 lg:justify-between lg:flex-row min-h-[450px] md:min-h-[650px] lg:min-h-[760px]">
-          <div className="space-y-4 text-center lg:text-left max-w-[500px] z-20">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-balance text-primary font-serif">
+        <div className="container py-12 px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 min-h-[65vh] lg:min-h-[50vh]">
+          <div className="text-center w-full max-w-xs sm:max-w-sm md:max-w-xl z-20">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-balance text-primary font-serif">
               Pelvic Floor Rehab
               <span className="text-3xl md:text-4xl lg:text-5xl">{' & '}</span>
               Wellness
             </h1>
-            <p className="text-pretty md:text-lg">
+            <p className="text-pretty text-center md:text-lg mt-1 mb-4 max-w-[500px] mx-auto">
               One on one, personalized care in the comfort of your home. Based
               in Central NJ.
             </p>
-            <Button size={'lg'} className="w-1/2 max-w-40" asChild>
+            <Button size={'lg'} className="w-full max-w-40" asChild>
               <Link href={'/contact'}>Schedule</Link>
             </Button>
           </div>
-          <Image
-            src={BallYoga}
-            alt="hero"
-            priority
-            className="hidden md:block rounded-xl object-contain h-auto w-full max-w-[400px] lg:max-w-none lg:w-[45%] z-10"
-          />
         </div>
         <div className="absolute bottom-0 -left-1 w-[105%] bg-white">
           <Image src={Wave} alt="wave" className="w-full" priority />
@@ -45,7 +38,7 @@ export default function Home() {
       </section>
 
       <div className="container px-4 md:px-6">
-        <section className="py-16">
+        <section className="py-12">
           <div className="flex flex-col md:flex-row gap-x-12">
             <Image
               src={Prenatal}
@@ -79,7 +72,7 @@ export default function Home() {
         </section>
 
         {/* Get Started section */}
-        <section className="bg-muted/60 rounded-xl py-16">
+        <section className="bg-muted/60 rounded-xl py-12 md:py-16">
           <h2 className="text-2xl md:text-3xl text-primary tracking-tight text-center font-medium">
             Getting Started with PelvFix
           </h2>
@@ -128,7 +121,7 @@ export default function Home() {
         </section>
 
         {/* Conditions Section */}
-        <section className="space-y-4 py-16">
+        <section className="space-y-4 py-12 md:py-16">
           <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
             What We Treat
           </h2>
@@ -136,7 +129,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="space-y-4 py-16">
+        <section className="space-y-4 py-12 md:py-16">
           <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
             What Our Patients Say
           </h2>
