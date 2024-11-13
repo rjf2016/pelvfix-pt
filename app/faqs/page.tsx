@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function FaqsPage() {
   return (
-    <div className="container flex flex-col px-4 py-12 max-w-3xl min-h-[calc(100vh-100px)] mb-16">
+    <div className="container flex flex-col px-4 py-12 max-w-3xl">
       <h1 className="text-2xl md:text-3xl text-primary font-medium tracking-tight text-center">
         Frequently Asked Questions
       </h1>
