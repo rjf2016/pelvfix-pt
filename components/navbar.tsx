@@ -19,10 +19,10 @@ import PelvfixSvg from '../public/pelvfix.svg';
 
 export default function Navbar() {
   return (
-    <header className={'w-full bg-muted sticky top-0 z-50'}>
+    <header className="w-full bg-muted sticky top-0 z-50 h-12 lg:h-16">
       <nav className="container mx-auto px-4 py-1 lg:py-3">
         <div className="flex justify-between items-center">
-          <Button variant={'link'} asChild className="px-2">
+          <Button variant={'link'} asChild className="px-2 py-1">
             <Link href={'/'}>
               <Image
                 src={PelvfixSvg}
@@ -48,7 +48,7 @@ export default function Navbar() {
                 </Link>
               </Button>
             ))}
-            <Button asChild className="h-full ml-2">
+            <Button asChild className="h-full">
               <Link href={'/contact'}>Contact</Link>
             </Button>
           </div>
