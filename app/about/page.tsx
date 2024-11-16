@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mb-16">
+    <div>
       <section className="bg-muted flex flex-col justify-center">
         <div className="container px-4 md:px-6 py-16 flex flex-col justify-center items-center md:items-start gap-x-8 lg:gap-x-16 gap-y-8 md:flex-row">
           <div className="h-full pt-4">
@@ -27,12 +27,12 @@ export default function AboutPage() {
               Meet Your Therapist
             </h1>
             <p>
-              <span className="text-primary/80 font-semibold">
+              <span className="text-primary/90 font-medium">
                 {'Dr. Suzanne Chedid '}
               </span>
               is a specialized physical therapist with a focus on pelvic floor
               rehabilitation. She earned her{' '}
-              <span className="text-primary/80 font-semibold">
+              <span className="text-primary/90 font-medium">
                 {' Doctor of Physical Therapy degree from Rutgers University'}
               </span>
               , where she discovered her passion for pelvic health during a
@@ -42,12 +42,15 @@ export default function AboutPage() {
               With experience in pelvic floor, neurological, and orthopedic
               rehabilitation in an outpatient hospital setting, Dr. Chedid
               developed a strong foundation in treating various conditions.
-              However, she found
-              <span className="text-primary/80 font-semibold">
-                {" women's health to be an underserved area"}
+              However, she found women&apos;s health to be an underserved area,
+              fueling her commitment to
+              <span className="text-primary/90 font-medium">
+                {' empowering women '}
               </span>
-              , fueling her commitment to empowering women and enhancing their
-              overall health and well-being.
+              and
+              <span className="text-primary/90 font-medium">
+                {' enhancing their overall health and well-being'}.
+              </span>
             </p>
             <p>
               {

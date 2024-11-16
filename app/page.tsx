@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="mb-16">
+    <div>
       {/* Hero Section */}
       <section className="relative bg-muted pb-6 overflow-x-hidden">
         <div className="container py-12 px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 min-h-[65vh] lg:min-h-[50vh]">
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-0 -left-1 w-[105%] bg-white">
-          <Image src={Wave} alt="wave" className="w-full" priority />
+          <Image src={Wave} alt="" className="w-full" priority />
         </div>
       </section>
 
@@ -42,9 +42,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-x-12">
             <Image
               src={Prenatal}
-              alt="yoga"
+              alt=""
               sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-xl mx-auto w-full object-contain max-w-[200px] md:max-w-[300px] lg:max-w-[400px]"
+              priority
             />
             <div className="w-full flex flex-col justify-center items-start space-y-4">
               <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
@@ -78,11 +79,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 md:justify-items-center">
             <div className="pt-8 flex flex-col items-center space-y-1 text-center md:min-h-[205px] px-1">
-              <Image
-                src={PhoneIcon}
-                alt="phone icon"
-                className="w-14 md:w-16"
-              />
+              <Image src={PhoneIcon} alt="" className="w-14 md:w-16" />
               <p className="text-primary font-medium pt-1 lg:text-lg ">
                 Free 15 Min Chat
               </p>
@@ -93,7 +90,7 @@ export default function Home() {
             </div>
 
             <div className="pt-8 flex flex-col items-center space-y-1 text-center md:min-h-[205px] px-1">
-              <Image src={HomeIcon} alt="home icon" className="w-14 md:w-16" />
+              <Image src={HomeIcon} alt="" className="w-14 md:w-16" />
               <p className="text-primary font-medium pt-1 lg:text-lg">
                 First Session!
               </p>
@@ -104,11 +101,7 @@ export default function Home() {
             </div>
 
             <div className="pt-8 flex flex-col items-center space-y-1 text-center md:min-h-[205px] px-1">
-              <Image
-                src={HappyIcon}
-                alt="calendar icon"
-                className="w-14 md:w-16"
-              />
+              <Image src={HappyIcon} alt="" className="w-14 md:w-16" />
               <p className="text-primary font-medium pt-1 lg:text-lg">
                 Find Lasting Relief
               </p>
