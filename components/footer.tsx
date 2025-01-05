@@ -76,9 +76,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-full py-1">
+        <div className="w-full py-2">
           <p className="text-center text-xs md:text-sm">
-            &copy; Copyright 2024 PelvFix PT. All Rights Reserved
+            &copy; 2025 PelvFix PT. All Rights Reserved
           </p>
         </div>
       </div>
