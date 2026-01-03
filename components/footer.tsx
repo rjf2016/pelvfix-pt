@@ -10,7 +10,7 @@ import TiktokIcon from '../public/tiktok.svg';
 
 export default function Footer() {
   return (
-    <footer className="bg-muted pt-8">
+    <footer className="bg-muted py-8">
       <div className="container mx-auto px-6 flex flex-col space-y-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-y-8">
           <Button variant={'link'} asChild className="px-2">
@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="w-full py-2">
           <p className="text-center text-xs md:text-sm">
-            &copy; 2025 PelvFix PT. All Rights Reserved
+            &copy; 2026 PelvFix PT. All Rights Reserved
           </p>
         </div>
       </div>
