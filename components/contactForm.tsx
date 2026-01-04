@@ -1,11 +1,12 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
+import { useState } from 'react';
+import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { useState } from 'react';
-
+import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckCircleIcon, Loader2 } from 'lucide-react';
+
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -19,7 +20,6 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import Link from 'next/link';
 
 const referrals = [
   {
@@ -70,20 +70,30 @@ export default function ContactForm() {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || '',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            fullName: data.fullName,
+            email: data.email,
+            phoneNumber: data.phoneNumber,
+            message: data.message,
+            referrals: data.referrals.join(', '),
+          }),
+        }
+      );
 
       if (!response.ok) {
-        throw new Error('Failed to send email');
+        throw new Error('Failed to send message');
       }
 
       window.scrollTo(0, 0);
       setIsSuccess(true);
+      form.reset();
 
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
