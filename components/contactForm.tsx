@@ -83,7 +83,7 @@ export default function ContactForm() {
       const formData = new FormData();
 
       // Formspree special fields
-      formData.append('subject', 'PelvFix Contact Form Submission');
+      formData.append('_subject', 'PelvFix Contact Form Submission');
       formData.append('_gotcha', data.company ?? '');
 
       formData.append('name', data.name);
