@@ -6,7 +6,13 @@ import { TREATMENTS } from '@/lib/data';
 import DoctorImg from '../../public/doctor.jpg';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title:
+    'About PelvFix PT – Dr. Suzanne Chedid, Pelvic Floor Physical Therapist in Central NJ',
+  description:
+    'Learn about PelvFix PT and Dr. Suzanne Chedid, a specialized pelvic floor physical therapist providing mobile, in-home care in Central NJ and surrounding areas.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {

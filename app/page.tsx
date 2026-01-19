@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 import Testimonials from '@/components/testimonials';
@@ -9,7 +10,17 @@ import Prenatal from '../public/prenatal.jpg';
 import PhoneIcon from '../public/phone-icon.svg';
 import HomeIcon from '../public/home-icon.svg';
 import HappyIcon from '../public/happy-icon.svg';
-import Link from 'next/link';
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Central NJ',
+  description:
+    'In-home pelvic floor physical therapy in Central NJ. PelvFix PT provides personalized, one-on-one care from Dr. Suzanne Chedid in the comfort of your home.',
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function Home() {
   return (
@@ -17,16 +28,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-muted pb-6 overflow-x-hidden">
         <div className="container py-12 px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 min-h-[65vh] lg:min-h-[50vh]">
-          <div className="text-center w-full max-w-xs sm:max-w-sm md:max-w-xl z-20">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-balance text-primary font-serif">
-              Pelvic Floor Rehab
-              <span className="text-3xl md:text-4xl lg:text-5xl">{' & '}</span>
-              Wellness
+          <div className="text-center w-full max-w-md md:max-w-lg lg:max-w-2xl z-20">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl text-balance text-primary font-serif">
+              Pelvic Floor Rehab & Wellness
             </h1>
-            <p className="text-pretty text-center md:text-lg mt-1 mb-4 max-w-[500px] mx-auto">
+            <h2 className="text-pretty text-center md:text-lg mt-4 mb-6 max-w-[384px] mx-auto">
               One on one, personalized care in the comfort of your home. Based
               in Central NJ.
-            </p>
+            </h2>
             <Button size={'lg'} className="w-full max-w-40" asChild>
               <Link href={'/contact'}>Schedule</Link>
             </Button>

@@ -8,7 +8,12 @@ import {
 import { FAQS } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'FAQs',
+  title: 'PelvFix PT FAQs – Pelvic Floor Physical Therapy Questions Answered',
+  description:
+    'Find answers to common questions about pelvic floor physical therapy, mobile visits, pricing, scheduling, and what to expect with PelvFix PT in Central NJ.',
+  alternates: {
+    canonical: '/faqs',
+  },
 };
 
 export default function FaqsPage() {
