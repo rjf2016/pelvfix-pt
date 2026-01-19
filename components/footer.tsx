@@ -15,11 +15,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-y-8">
           <Button variant={'link'} asChild className="px-2">
             <Link href={'/'} className="flex justify-center md:justify-start">
-              <Image
-                src={PelvfixSvg}
-                alt="PelvFix logo"
-                className="h-6 w-auto"
-              />
+              <Image src={PelvfixSvg} alt="PelvFix" className="h-6 w-auto" />
             </Link>
           </Button>
           <div className="flex-1 flex flex-row items-center justify-center gap-x-6">

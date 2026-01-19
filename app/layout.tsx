@@ -23,16 +23,24 @@ const serif = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: { default: 'PelvFix PT', template: '%s | PelvFix PT' },
-  description: 'Pelvic Floor Physical Therapy',
-  keywords: 'Pelvic Floor, Physical Therapy, Health, Wellness, NJ, Women',
+  metadataBase: new URL('https://www.pelvfixpt.com'),
+  title: {
+    default: 'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Central NJ',
+    template: '%s - PelvFix PT',
+  },
+  description:
+    'Mobile pelvic floor physical therapy serving Central NJ. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
+  keywords:
+    'Pelvic Floor, Physical Therapy, Health, Wellness, NJ, Women, Pelvic PT',
   robots: 'index, follow',
+
   openGraph: {
-    title: 'PelvFix PT',
-    description: 'Pelvic Floor Physical Therapy',
-    url: 'https://pelvfixpt.com',
-    siteName: 'PelvFix PT',
     type: 'website',
+    url: '/',
+    siteName: 'PelvFix PT',
+    title: 'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Central NJ',
+    description:
+      'Mobile pelvic floor physical therapy serving Central New Jersey. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
     locale: 'en_US',
     images: [
       {
@@ -41,6 +49,18 @@ export const metadata: Metadata = {
         width: 736,
       },
     ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Central NJ',
+    description:
+      'Mobile pelvic floor physical therapy serving Central New Jersey. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
+    images: ['https://pelvfixpt.com/og-logo.jpg'],
+  },
+
+  alternates: {
+    canonical: '/',
   },
 };
 

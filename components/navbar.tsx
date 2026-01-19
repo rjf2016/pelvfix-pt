@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link href={'/'}>
               <Image
                 src={PelvfixSvg}
-                alt="PelvFix Logo"
+                alt="PelvFix"
                 className="h-5 w-auto"
                 priority
               />
