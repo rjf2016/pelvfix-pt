@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <div>
       <section className="bg-muted flex flex-col justify-center">
-        <div className="container px-4 md:px-6 py-16 flex flex-col justify-center items-center md:items-start gap-x-8 lg:gap-x-16 gap-y-8 md:flex-row">
+        <div className="container px-6 py-16 flex flex-col justify-center items-center md:items-start gap-x-8 lg:gap-x-16 gap-y-8 md:flex-row">
           <div className="h-full pt-4">
             <Image
               src={DoctorImg}
@@ -28,7 +28,7 @@ export default function AboutPage() {
               priority
             />
           </div>
-          <div className="flex flex-col w-full h-full px-2 space-y-4 md:text-lg leading-relaxed text-foreground text-pretty md:text-left">
+          <div className="flex flex-col w-full h-full space-y-4 md:text-lg leading-relaxed text-foreground text-pretty md:text-left">
             <h1 className="font-serif text-3xl md:text-4xl text-primary">
               Meet Your Therapist
             </h1>
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="container px-4 md:px-6">
+      <div className="container px-6">
         {/* Promise Section */}
         <section className="py-16">
           <div className=" rounded-xl space-y-4">
@@ -85,14 +85,14 @@ export default function AboutPage() {
         </section>
 
         <section
-          className="py-8 space-y-6 flex flex-col items-center bg-muted/50 rounded-xl"
+          className="py-12 md:py-16 space-y-6 flex flex-col bg-muted/50 rounded-xl px-6"
           id="treatments"
         >
-          <div className="text-center px-4 space-y-1">
+          <div className="text-center space-y-1">
             <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
               Treatments We Provide
             </h2>
-            <p className="text-primary text-balance">
+            <p className="text-primafry text-balance">
               Don&apos;t see what you need?
               <Link
                 href={'/contact'}
@@ -103,7 +103,7 @@ export default function AboutPage() {
               to find out if we can help.
             </p>
           </div>
-          <ul className="list-disc list-inside grid grid-cols-1 md:grid-cols-2">
+          <ul className="list-disc list-inside grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-1 max-w-2xl text-foreground leading-relaxed md:text-lg mx-auto">
             {TREATMENTS.map((treatment) => (
               <li key={treatment}>{treatment}</li>
             ))}
