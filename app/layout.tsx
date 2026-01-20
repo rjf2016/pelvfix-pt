@@ -72,12 +72,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn('font-sans antialiased', sans.variable, serif.variable)}
+        className={cn(
+          'font-sans antialiased bg-muted',
+          sans.variable,
+          serif.variable,
+        )}
       >
         <div className="flex flex-col min-h-screen">
           <Navbar />
 
-          <main className="flex-grow flex flex-col h-full pb-12">
+          <main className="flex-grow flex flex-col h-full pb-12 bg-white">
             {children}
           </main>
           <Footer />

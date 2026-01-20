@@ -66,7 +66,6 @@ export const TREATMENTS = [
   'Patient education',
   'Neuromuscular re-education',
   'Postural re-education',
-  'Instrument Assisted Soft Tissue Mobilization',
   'Movement analysis',
   'General nutrition information',
 ];
