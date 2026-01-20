@@ -92,7 +92,7 @@ export default function AboutPage() {
             <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
               Treatments We Provide
             </h2>
-            <p className="text-primafry text-balance">
+            <p className="text-primary text-balance">
               Don&apos;t see what you need?
               <Link
                 href={'/contact'}
