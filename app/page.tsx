@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Testimonials from '@/components/testimonials';
 import Services from '@/components/services';
+import { generateReviewSchema } from '@/lib/schema';
 
 import Wave from '../public/wave.svg';
 import Prenatal from '../public/prenatal.jpg';
@@ -14,17 +15,26 @@ import HappyIcon from '../public/happy-icon.svg';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Central NJ',
+  title:
+    'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Middlesex County, NJ',
   description:
-    'In-home pelvic floor physical therapy in Central NJ. PelvFix PT provides personalized, one-on-one care from Dr. Suzanne Chedid in the comfort of your home.',
+    'In-home pelvic floor physical therapy in Middlesex County, East Brunswick, and Central NJ. PelvFix PT provides personalized, one-on-one care from Dr. Suzanne Chedid in the comfort of your home.',
   alternates: {
     canonical: '/',
   },
 };
 
 export default function Home() {
+  const reviewSchema = generateReviewSchema();
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(reviewSchema),
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-muted pb-6 overflow-x-hidden">
         <div className="container py-12 px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 min-h-[65vh] lg:min-h-[50vh]">
@@ -33,8 +43,8 @@ export default function Home() {
               Pelvic Floor Rehab & Wellness
             </h1>
             <h2 className="text-pretty text-center md:text-lg mt-4 mb-6 max-w-[384px] mx-auto">
-              One on one, personalized care in the comfort of your home. Based
-              in Central NJ.
+              One on one, personalized care in the comfort of your home. Serving
+              Middlesex County and Central NJ.
             </h2>
             <Button size={'lg'} className="w-full max-w-40" asChild>
               <Link href={'/contact'}>Schedule</Link>
@@ -51,7 +61,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-x-12">
             <Image
               src={Prenatal}
-              alt=""
+              alt="Pregnant woman receiving pelvic floor physical therapy care"
               sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-xl mx-auto w-full object-contain max-w-[200px] md:max-w-[300px] lg:max-w-[400px]"
               priority

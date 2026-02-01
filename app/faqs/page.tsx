@@ -6,18 +6,29 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { FAQS } from '@/lib/data';
+import { generateFAQPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'PelvFix PT FAQs – Pelvic Floor Physical Therapy Questions Answered',
+  title:
+    'PelvFix PT FAQs – Pelvic Floor Physical Therapy Questions Answered in Middlesex County, NJ',
   description:
-    'Find answers to common questions about pelvic floor physical therapy, mobile visits, pricing, scheduling, and what to expect with PelvFix PT in Central NJ.',
+    'Find answers to common questions about pelvic floor physical therapy, mobile visits, pricing, scheduling, and what to expect with PelvFix PT in Middlesex County and Central NJ.',
   alternates: {
     canonical: '/faqs',
   },
 };
 
 export default function FaqsPage() {
+  const faqSchema = generateFAQPageSchema();
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
     <div className="container flex flex-col px-4 py-12 max-w-3xl">
       <h1 className="text-2xl md:text-3xl text-primary font-medium tracking-tight text-center">
         Frequently Asked Questions
@@ -44,5 +55,6 @@ export default function FaqsPage() {
         ))}
       </Accordion>
     </div>
+    </>
   );
 }
