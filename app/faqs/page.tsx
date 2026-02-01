@@ -10,9 +10,9 @@ import { generateFAQPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title:
-    'PelvFix PT FAQs – Pelvic Floor Physical Therapy Questions Answered in Middlesex County, NJ',
+    'FAQs – Pelvic Floor Physical Therapy Questions Answered in Middlesex County, NJ',
   description:
-    'Find answers to common questions about pelvic floor physical therapy, mobile visits, pricing, scheduling, and what to expect with PelvFix PT in Middlesex County and Central NJ.',
+    'Find answers to common questions about pelvic floor physical therapy, mobile visits, pricing, scheduling, and what to expect with PelvFix Physical Therapy in Middlesex County and Central NJ.',
   alternates: {
     canonical: '/faqs',
   },

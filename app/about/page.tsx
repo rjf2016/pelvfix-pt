@@ -8,9 +8,9 @@ import DoctorImg from '../../public/doctor.jpg';
 
 export const metadata: Metadata = {
   title:
-    'About PelvFix PT – Dr. Suzanne Chedid, Pelvic Floor Physical Therapist in Middlesex County, NJ',
+    'About PelvFix Physical Therapy – Dr. Suzanne Chedid, Pelvic Floor Therapist in Middlesex County, NJ',
   description:
-    'Learn about PelvFix PT and Dr. Suzanne Chedid, a specialized pelvic floor physical therapist providing mobile, in-home care in Middlesex County, East Brunswick, and Central NJ.',
+    'Learn about PelvFix Physical Therapy and Dr. Suzanne Chedid, a specialized pelvic floor physical therapist providing mobile, in-home care in Middlesex County, East Brunswick, and Central NJ.',
   alternates: {
     canonical: '/about',
   },

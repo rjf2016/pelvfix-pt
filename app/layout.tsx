@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { DM_Sans, Playfair_Display } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import {
-  generateLocalBusinessSchema,
   generateOrganizationSchema,
+  generateWebSiteSchema,
 } from '@/lib/schema';
 
 import './globals.css';
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.pelvfixpt.com'),
   title: {
     default:
-      'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Middlesex County, NJ',
-    template: '%s - PelvFix PT',
+      'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
+    template: '%s - PelvFix Physical Therapy',
   },
   description:
     'Mobile pelvic floor physical therapy serving Middlesex County, East Brunswick, and Central NJ. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    siteName: 'PelvFix PT',
+    siteName: 'PelvFix',
     title:
-      'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Middlesex County, NJ',
+      'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
     description:
       'Mobile pelvic floor physical therapy serving Middlesex County, East Brunswick, and Central New Jersey. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
     locale: 'en_US',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Middlesex County, NJ',
+      'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
     description:
       'Mobile pelvic floor physical therapy serving Middlesex County, East Brunswick, and Central New Jersey. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
     images: ['https://www.pelvfixpt.com/og-logo.jpg'],
@@ -76,8 +76,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const localBusinessSchema = generateLocalBusinessSchema();
   const organizationSchema = generateOrganizationSchema();
+  const webSiteSchema = generateWebSiteSchema();
 
   return (
     <html lang="en">
@@ -87,7 +87,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
+            __html: JSON.stringify(webSiteSchema),
           }}
         />
         <script

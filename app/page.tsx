@@ -16,9 +16,9 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
-    'PelvFix PT - Mobile Pelvic Floor Physical Therapy in Middlesex County, NJ',
+    'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
   description:
-    'In-home pelvic floor physical therapy in Middlesex County, East Brunswick, and Central NJ. PelvFix PT provides personalized, one-on-one care from Dr. Suzanne Chedid in the comfort of your home.',
+    'In-home pelvic floor physical therapy in Middlesex County, East Brunswick, and Central NJ. PelvFix Physical Therapy provides personalized, one-on-one care from Dr. Suzanne Chedid in the comfort of your home.',
   alternates: {
     canonical: '/',
   },

@@ -1,41 +1,36 @@
 import { TESTIMONIAL_DATA, SOCIAL_LINKS, FAQS } from './data';
 
 const BASE_URL = 'https://www.pelvfixpt.com';
+const BUSINESS_NAME = 'PelvFix Physical Therapy';
+const SITE_NAME = 'PelvFix';
 
-export function generateLocalBusinessSchema() {
+export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': `${BASE_URL}/#localbusiness`,
-    name: 'PelvFix PT',
+    '@type': 'WebSite',
+    '@id': `${BASE_URL}/#website`,
+    name: SITE_NAME,
+    url: BASE_URL,
+    publisher: {
+      '@id': `${BASE_URL}/#organization`,
+    },
+  };
+}
+
+export function generateOrganizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${BASE_URL}/#organization`,
+    name: BUSINESS_NAME,
+    url: BASE_URL,
+    logo: `${BASE_URL}/og-logo.jpg`,
+    image: `${BASE_URL}/og-logo.jpg`,
     description:
       'Mobile pelvic floor physical therapy serving Middlesex County and Central NJ. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
-    url: BASE_URL,
     telephone: '+1-732-853-1055',
     email: 'info@pelvfixpt.com',
-    image: `${BASE_URL}/og-logo.jpg`,
-    priceRange: '$$',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'East Brunswick',
-      addressRegion: 'NJ',
-      addressCountry: 'US',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 40.4286,
-      longitude: -74.4157,
-    },
-    areaServed: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: 40.4286,
-        longitude: -74.4157,
-      },
-      geoRadius: '30 mi',
-    },
-    serviceArea: [
+    areaServed: [
       {
         '@type': 'AdministrativeArea',
         name: 'Middlesex County, NJ',
@@ -79,33 +74,17 @@ export function generateLocalBusinessSchema() {
       ],
     },
     sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.facebook, SOCIAL_LINKS.tiktok],
+    founder: {
+      '@type': 'Person',
+      name: 'Dr. Suzanne Chedid',
+      jobTitle: 'Doctor of Physical Therapy',
+    },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
       reviewCount: TESTIMONIAL_DATA.length.toString(),
       bestRating: '5',
       worstRating: '1',
-    },
-  };
-}
-
-export function generateOrganizationSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${BASE_URL}/#organization`,
-    name: 'PelvFix PT',
-    url: BASE_URL,
-    logo: `${BASE_URL}/og-logo.jpg`,
-    description:
-      'Mobile pelvic floor physical therapy serving Middlesex County and Central NJ.',
-    telephone: '+1-732-853-1055',
-    email: 'info@pelvfixpt.com',
-    sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.facebook, SOCIAL_LINKS.tiktok],
-    founder: {
-      '@type': 'Person',
-      name: 'Dr. Suzanne Chedid',
-      jobTitle: 'Doctor of Physical Therapy',
     },
   };
 }
@@ -127,7 +106,7 @@ export function generatePersonSchema() {
     url: `${BASE_URL}/about`,
     worksFor: {
       '@type': 'Organization',
-      name: 'PelvFix PT',
+      name: BUSINESS_NAME,
       url: BASE_URL,
     },
     alumniOf: {
@@ -175,9 +154,9 @@ export function generateFAQPageSchema() {
 export function generateReviewSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'Organization',
     '@id': `${BASE_URL}/#reviews`,
-    name: 'PelvFix PT',
+    name: BUSINESS_NAME,
     review: TESTIMONIAL_DATA.map((testimonial) => ({
       '@type': 'Review',
       author: {
