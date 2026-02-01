@@ -3,27 +3,36 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 import { TREATMENTS } from '@/lib/data';
+import { generatePersonSchema } from '@/lib/schema';
 import DoctorImg from '../../public/doctor.jpg';
 
 export const metadata: Metadata = {
   title:
-    'About PelvFix PT – Dr. Suzanne Chedid, Pelvic Floor Physical Therapist in Central NJ',
+    'About PelvFix Physical Therapy – Dr. Suzanne Chedid, Pelvic Floor Therapist in Middlesex County, NJ',
   description:
-    'Learn about PelvFix PT and Dr. Suzanne Chedid, a specialized pelvic floor physical therapist providing mobile, in-home care in Central NJ and surrounding areas.',
+    'Learn about PelvFix Physical Therapy and Dr. Suzanne Chedid, a specialized pelvic floor physical therapist providing mobile, in-home care in Middlesex County, East Brunswick, and Central NJ.',
   alternates: {
     canonical: '/about',
   },
 };
 
 export default function AboutPage() {
+  const personSchema = generatePersonSchema();
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personSchema),
+        }}
+      />
       <section className="bg-muted flex flex-col justify-center">
         <div className="container px-6 py-16 flex flex-col justify-center items-center md:items-start gap-x-8 lg:gap-x-16 gap-y-8 md:flex-row">
           <div className="h-full pt-4">
             <Image
               src={DoctorImg}
-              alt="Doctor"
+              alt="Dr. Suzanne Chedid, DPT - Pelvic Floor Physical Therapist"
               className="rounded-lg rounded-tl-[15%] rounded-br-[15%] w-64 md:w-96"
               priority
             />
