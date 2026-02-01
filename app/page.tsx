@@ -37,9 +37,9 @@ export default function Home() {
       />
       {/* Hero Section */}
       <section className="relative bg-muted pb-6 overflow-x-hidden">
-        <div className="container py-12 px-4 md:px-8 flex flex-col items-center justify-center gap-y-8 min-h-[65vh] lg:min-h-[50vh]">
+        <div className="container py-12 px-6 md:px-8 flex flex-col items-center justify-center gap-y-8 min-h-[65vh] lg:min-h-[50vh]">
           <div className="text-center w-full max-w-md md:max-w-lg lg:max-w-2xl z-20">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl text-balance text-primary font-serif">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-balance text-primary font-serif">
               Pelvic Floor Rehab & Wellness
             </h1>
             <h2 className="text-pretty text-center md:text-lg mt-4 mb-6 max-w-[384px] mx-auto">
@@ -52,12 +52,19 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-0 -left-1 w-[105%] bg-white">
-          <Image src={Wave} alt="" className="w-full" priority />
+          <Image
+            src={Wave}
+            alt=""
+            aria-hidden="true"
+            sizes="100vw"
+            className="w-full"
+            priority
+          />
         </div>
       </section>
 
-      <div className="container px-4 md:px-6">
-        <section className="py-12">
+      <div className="container px-6 space-y-12 md:space-y-16 lg:space-y-20 py-12 md:py-16">
+        <section>
           <div className="flex flex-col md:flex-row gap-x-12">
             <Image
               src={Prenatal}
@@ -98,7 +105,12 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 md:justify-items-center">
             <div className="pt-8 flex flex-col items-center space-y-1 text-center md:min-h-[205px] px-1">
-              <Image src={PhoneIcon} alt="" className="w-14 md:w-16" />
+              <Image
+                src={PhoneIcon}
+                alt=""
+                aria-hidden="true"
+                className="w-14 md:w-16"
+              />
               <p className="text-primary font-medium pt-1 lg:text-lg ">
                 Free 15 Min Chat
               </p>
@@ -109,7 +121,12 @@ export default function Home() {
             </div>
 
             <div className="pt-8 flex flex-col items-center space-y-1 text-center md:min-h-[205px] px-1">
-              <Image src={HomeIcon} alt="" className="w-14 md:w-16" />
+              <Image
+                src={HomeIcon}
+                alt=""
+                aria-hidden="true"
+                className="w-14 md:w-16"
+              />
               <p className="text-primary font-medium pt-1 lg:text-lg">
                 First Session!
               </p>
@@ -120,7 +137,12 @@ export default function Home() {
             </div>
 
             <div className="pt-8 flex flex-col items-center space-y-1 text-center md:min-h-[205px] px-1">
-              <Image src={HappyIcon} alt="" className="w-14 md:w-16" />
+              <Image
+                src={HappyIcon}
+                alt=""
+                aria-hidden="true"
+                className="w-14 md:w-16"
+              />
               <p className="text-primary font-medium pt-1 lg:text-lg">
                 Find Lasting Relief
               </p>
@@ -133,7 +155,7 @@ export default function Home() {
         </section>
 
         {/* Conditions Section */}
-        <section className="space-y-4 py-12 md:py-16">
+        <section className="space-y-6 py-12">
           <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
             What We Treat
           </h2>
@@ -141,7 +163,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="space-y-4 py-12 md:py-16">
+        <section className="space-y-6 py-12">
           <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
             What Our Patients Say
           </h2>

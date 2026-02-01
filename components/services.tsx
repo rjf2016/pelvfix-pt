@@ -79,7 +79,7 @@ const Services = memo(() => {
             <AccordionTrigger className="text-left">
               {tab.title}
             </AccordionTrigger>
-            <AccordionContent className="text-foreground">
+            <AccordionContent className="text-foreground leading-relaxed">
               {tab.content}
             </AccordionContent>
           </AccordionItem>
