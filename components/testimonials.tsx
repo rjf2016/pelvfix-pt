@@ -17,21 +17,23 @@ type TestimonialData = {
 function TestimonalCard(testimonal: TestimonialData) {
   return (
     <Card className="h-full bg-muted/50 border-none rounded-xl shadow-none">
-      <CardContent className="p-6 h-full flex flex-col justify-between gap-y-4 text-pretty text-sm md:text-base">
-        <div className="flex gap-x-0.5 justify-center">
-          {[...Array(testimonal.rating)].map((_, index) => (
-            <StarIcon
-              key={index}
-              size={18}
-              stroke="#FFBF54"
-              strokeWidth={2.5}
-              fill="#FFBF54"
-            />
-          ))}
+      <CardContent className="p-6 h-full flex flex-col justify-between gap-y-4 text-sm md:text-base">
+        <div className="flex flex-col gap-y-4">
+          <div className="flex gap-x-0.5 justify-center">
+            {[...Array(testimonal.rating)].map((_, index) => (
+              <StarIcon
+                key={index}
+                size={18}
+                stroke="#FFBF54"
+                strokeWidth={2.5}
+                fill="#FFBF54"
+              />
+            ))}
+          </div>
+          <p className="line-clamp-7 leading-relaxed select-none">
+            {testimonal.review}
+          </p>
         </div>
-        <p className="line-clamp-6 leading-relaxed select-none">
-          {testimonal.review}
-        </p>
         <p className="font-medium text-left select-none">{testimonal.name}</p>
       </CardContent>
     </Card>
