@@ -29,24 +29,22 @@ const serif = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pelvfixpt.com'),
   title: {
-    default:
-      'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
-    template: '%s - PelvFix Physical Therapy',
+    default: 'In-Home Pelvic Floor Physical Therapy | Middlesex County NJ',
+    template: '%s | PelvFix',
   },
   description:
-    'Mobile pelvic floor physical therapy serving Middlesex County, East Brunswick, and Central NJ. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
+    'Mobile pelvic floor physical therapy serving Middlesex County, South Brunswick, and Central NJ. Dr. Suzanne Chedid Fahey brings expert one-on-one care directly to your home.',
   keywords:
-    'Pelvic Floor, Physical Therapy, Health, Wellness, NJ, Women, Pelvic PT, Middlesex County, East Brunswick, in-home PT, mobile physical therapy',
+    'Pelvic Floor, Physical Therapy, Health, Wellness, NJ, Women, Pelvic PT, Middlesex County, South Brunswick, in-home PT, mobile physical therapy',
   robots: 'index, follow',
 
   openGraph: {
     type: 'website',
     url: '/',
     siteName: 'PelvFix',
-    title:
-      'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
+    title: 'In-Home Pelvic Floor Physical Therapy | Middlesex County NJ',
     description:
-      'Mobile pelvic floor physical therapy serving Middlesex County, East Brunswick, and Central New Jersey. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
+      'Mobile pelvic floor physical therapy serving Middlesex County, South Brunswick, and Central New Jersey. Dr. Suzanne Chedid Fahey brings expert one-on-one care directly to your home.',
     locale: 'en_US',
     images: [
       {
@@ -59,10 +57,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title:
-      'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
+    title: 'In-Home Pelvic Floor Physical Therapy | Middlesex County NJ',
     description:
-      'Mobile pelvic floor physical therapy serving Middlesex County, East Brunswick, and Central New Jersey. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
+      'Mobile pelvic floor physical therapy serving Middlesex County, South Brunswick, and Central New Jersey. Dr. Suzanne Chedid Fahey brings expert one-on-one care directly to your home.',
     images: ['https://www.pelvfixpt.com/og-logo.jpg'],
   },
 

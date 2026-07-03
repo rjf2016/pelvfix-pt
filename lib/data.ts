@@ -163,7 +163,7 @@ export const FAQS = [
     id: '8',
     question: 'What areas do you serve?',
     answer: [
-      'We provide in-home physical therapy services to patients in Middlesex County, and surrounding areas (approximately 30 minutes from East Brunswick, NJ). If you are outside of our service area, feel free to reach out to see if we can accommodate your location.',
+      'We provide in-home physical therapy services to patients in Middlesex County, and surrounding areas (approximately 30 minutes from South Brunswick, NJ). If you are outside of our service area, feel free to reach out to see if we can accommodate your location.',
     ],
   },
   {

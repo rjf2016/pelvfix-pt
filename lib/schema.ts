@@ -10,6 +10,7 @@ export function generateWebSiteSchema() {
     '@type': 'WebSite',
     '@id': `${BASE_URL}/#website`,
     name: SITE_NAME,
+    alternateName: BUSINESS_NAME,
     url: BASE_URL,
     publisher: {
       '@id': `${BASE_URL}/#organization`,
@@ -23,17 +24,22 @@ export function generateOrganizationSchema() {
     '@type': 'Organization',
     '@id': `${BASE_URL}/#organization`,
     name: BUSINESS_NAME,
+    alternateName: SITE_NAME,
     url: BASE_URL,
     logo: `${BASE_URL}/og-logo.jpg`,
     image: `${BASE_URL}/og-logo.jpg`,
     description:
-      'Mobile pelvic floor physical therapy serving Middlesex County and Central NJ. Dr. Suzanne Chedid brings expert one-on-one care directly to your home.',
+      'Mobile pelvic floor physical therapy serving Middlesex County and Central NJ. Dr. Suzanne Chedid Fahey brings expert one-on-one care directly to your home.',
     telephone: '+1-732-853-1055',
     email: 'info@pelvfixpt.com',
     areaServed: [
       {
         '@type': 'AdministrativeArea',
         name: 'Middlesex County, NJ',
+      },
+      {
+        '@type': 'City',
+        name: 'South Brunswick, NJ',
       },
       {
         '@type': 'AdministrativeArea',
@@ -76,7 +82,7 @@ export function generateOrganizationSchema() {
     sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.facebook, SOCIAL_LINKS.tiktok],
     founder: {
       '@type': 'Person',
-      name: 'Dr. Suzanne Chedid',
+      name: 'Dr. Suzanne Chedid Fahey',
       jobTitle: 'Doctor of Physical Therapy',
     },
     aggregateRating: {
@@ -94,14 +100,14 @@ export function generatePersonSchema() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     '@id': `${BASE_URL}/about#person`,
-    name: 'Dr. Suzanne Chedid',
+    name: 'Dr. Suzanne Chedid Fahey',
     givenName: 'Suzanne',
-    familyName: 'Chedid',
+    familyName: 'Chedid Fahey',
     honorificPrefix: 'Dr.',
     honorificSuffix: 'DPT',
     jobTitle: 'Pelvic Floor Physical Therapist',
     description:
-      'Dr. Suzanne Chedid is a specialized pelvic floor physical therapist and certified Pregnancy and Postpartum Corrective Exercise Specialist (PCES) providing mobile, in-home care in Middlesex County and Central NJ.',
+      'Dr. Suzanne Chedid Fahey is a specialized pelvic floor physical therapist and certified Pregnancy and Postpartum Corrective Exercise Specialist (PCES) providing mobile, in-home care in Middlesex County and Central NJ.',
     image: `${BASE_URL}/doctor.jpg`,
     url: `${BASE_URL}/about`,
     worksFor: {
