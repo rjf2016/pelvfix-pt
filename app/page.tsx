@@ -15,10 +15,11 @@ import HappyIcon from '../public/happy-icon.svg';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title:
-    'PelvFix Physical Therapy - Mobile Pelvic Floor PT in Middlesex County, NJ',
+  title: {
+    absolute: 'In-Home Pelvic Floor Physical Therapy | Middlesex County NJ',
+  },
   description:
-    'In-home pelvic floor physical therapy in Middlesex County, East Brunswick, and Central NJ. PelvFix Physical Therapy provides personalized, one-on-one care from Dr. Suzanne Chedid in the comfort of your home.',
+    'In-home pelvic floor physical therapy in Middlesex County, South Brunswick & Central NJ. One-on-one care from Dr. Suzanne Chedid Fahey in the comfort of your home.',
   alternates: {
     canonical: '/',
   },
@@ -42,10 +43,10 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl text-balance text-primary font-serif">
               Pelvic Floor Rehab & Wellness
             </h1>
-            <h2 className="text-pretty text-center md:text-lg mt-4 mb-6 max-w-[384px] mx-auto">
-              One on one, personalized care in the comfort of your home. Serving
-              Middlesex County and Central NJ.
-            </h2>
+            <p className="text-pretty text-center md:text-lg mt-4 mb-6 max-w-[384px] mx-auto">
+              One on one, personalized pelvic floor physical therapy in the
+              comfort of your home. Serving Middlesex County and Central NJ.
+            </p>
             <Button size={'lg'} className="w-full max-w-40" asChild>
               <Link href={'/contact'}>Schedule</Link>
             </Button>

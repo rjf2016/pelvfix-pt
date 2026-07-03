@@ -2,10 +2,9 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/contactForm';
 
 export const metadata: Metadata = {
-  title:
-    'Contact – Book Mobile Pelvic Floor Physical Therapy in Middlesex County, NJ',
+  title: 'Book In-Home Pelvic Floor Therapy in NJ',
   description:
-    'Contact PelvFix Physical Therapy to book an in-home pelvic floor physical therapy session in Middlesex County, East Brunswick, and Central NJ or ask questions about our services and availability.',
+    'Contact PelvFix Physical Therapy to book an in-home pelvic floor PT session in Middlesex County, South Brunswick, or Central NJ. Call (732) 853-1055.',
   alternates: {
     canonical: '/contact',
   },

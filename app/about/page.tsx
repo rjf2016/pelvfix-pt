@@ -7,10 +7,9 @@ import { generatePersonSchema } from '@/lib/schema';
 import DoctorImg from '../../public/doctor.jpg';
 
 export const metadata: Metadata = {
-  title:
-    'About PelvFix Physical Therapy – Dr. Suzanne Chedid, Pelvic Floor Therapist in Middlesex County, NJ',
+  title: 'Dr. Suzanne Chedid Fahey, Pelvic Floor Therapist',
   description:
-    'Learn about PelvFix Physical Therapy and Dr. Suzanne Chedid, a specialized pelvic floor physical therapist providing mobile, in-home care in Middlesex County, East Brunswick, and Central NJ.',
+    'Meet Dr. Suzanne Chedid Fahey, DPT — pelvic floor physical therapist providing mobile, in-home care in Middlesex County, South Brunswick, and Central NJ.',
   alternates: {
     canonical: '/about',
   },
@@ -32,7 +31,7 @@ export default function AboutPage() {
           <div className="h-full pt-4">
             <Image
               src={DoctorImg}
-              alt="Dr. Suzanne Chedid, DPT - Pelvic Floor Physical Therapist"
+              alt="Dr. Suzanne Chedid Fahey, DPT - Pelvic Floor Physical Therapist"
               className="rounded-lg rounded-tl-[15%] rounded-br-[15%] w-64 md:w-96"
               priority
             />
@@ -43,7 +42,7 @@ export default function AboutPage() {
             </h1>
             <p>
               <span className="text-primary/90 font-medium">
-                {'Dr. Suzanne Chedid '}
+                {'Dr. Suzanne Chedid Fahey '}
               </span>
               is a specialized physical therapist with a focus on pelvic floor
               rehabilitation. She earned her{' '}
@@ -55,7 +54,7 @@ export default function AboutPage() {
             </p>
             <p>
               With experience in pelvic floor, neurological, and orthopedic
-              rehabilitation in an outpatient hospital setting, Dr. Chedid
+              rehabilitation in an outpatient hospital setting, Dr. Chedid Fahey
               developed a strong foundation in treating various conditions.
               However, she found women&apos;s health to be an underserved area,
               fueling her commitment to
@@ -69,7 +68,7 @@ export default function AboutPage() {
             </p>
             <p>
               {
-                'As the owner of PelvFix and a certified Pregnancy and Postpartum Corrective Exercise Specialist (PCES), Dr. Chedid is dedicated to helping women understand and overcome pelvic floor conditions to improve their quality of life.'
+                'As the owner of PelvFix and a certified Pregnancy and Postpartum Corrective Exercise Specialist (PCES), Dr. Chedid Fahey is dedicated to helping women understand and overcome pelvic floor conditions to improve their quality of life.'
               }
             </p>
           </div>
