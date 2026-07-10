@@ -38,7 +38,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col w-full h-full space-y-4 md:text-lg leading-relaxed text-foreground text-pretty md:text-left">
             <h1 className="font-serif text-3xl md:text-4xl text-primary">
-              Meet Your Pelvic Floor Physical Therapist
+              Meet Your Therapist
             </h1>
             <p>
               <span className="text-primary/90 font-medium">

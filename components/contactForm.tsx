@@ -142,21 +142,11 @@ export default function ContactForm() {
         </div>
       ) : (
         <div>
+          <h1 className="text-2xl text-primary font-medium tracking-tight text-center">
+            Contact Us
+          </h1>
           <p className="text-foreground text-center">
-            We bring one-on-one pelvic floor physical therapy to homes across
-            Middlesex County and Central NJ — from South Brunswick and East
-            Brunswick to Edison, Monroe, and Princeton.
-          </p>
-          <p className="text-foreground text-center mt-2">
-            Fill out the form below or call{' '}
-            <a
-              href="tel:+17328531055"
-              className="underline underline-offset-4"
-            >
-              (732) 853-1055
-            </a>{' '}
-            to request your free 15-minute phone consultation — we will get
-            back to you within 24 hours.
+            Fill out the form below and we will get back to you within 24 hours.
           </p>
 
           <Form {...form}>

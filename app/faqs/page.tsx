@@ -30,7 +30,7 @@ export default function FaqsPage() {
       />
       <div className="container flex flex-col px-4 py-12 max-w-3xl">
         <h1 className="text-2xl md:text-3xl text-primary font-medium tracking-tight text-center">
-          Pelvic Floor Physical Therapy: Frequently Asked Questions
+          Frequently Asked Questions
         </h1>
         <Accordion
           type="single"

@@ -77,8 +77,7 @@ export default function Footer() {
 
         <div className="w-full py-2">
           <p className="text-center text-xs md:text-sm">
-            &copy; {new Date().getFullYear()} PelvFix Physical Therapy. All
-            Rights Reserved
+            &copy; 2026 PelvFix PT. All Rights Reserved
           </p>
         </div>
       </div>
