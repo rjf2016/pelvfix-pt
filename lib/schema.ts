@@ -1,4 +1,9 @@
-import { TESTIMONIAL_DATA, SOCIAL_LINKS, FAQS } from './data';
+import {
+  TESTIMONIAL_DATA,
+  SOCIAL_LINKS,
+  FAQS,
+  SERVICE_AREA_TOWNS,
+} from './data';
 
 const BASE_URL = 'https://www.pelvfixpt.com';
 const BUSINESS_NAME = 'PelvFix Physical Therapy';
@@ -21,7 +26,7 @@ export function generateWebSiteSchema() {
 export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': ['MedicalBusiness', 'Physiotherapy'],
     '@id': `${BASE_URL}/#organization`,
     name: BUSINESS_NAME,
     alternateName: SITE_NAME,
@@ -32,19 +37,26 @@ export function generateOrganizationSchema() {
       'Mobile pelvic floor physical therapy serving Middlesex County and Central NJ. Dr. Suzanne Chedid Fahey brings expert one-on-one care directly to your home.',
     telephone: '+1-732-853-1055',
     email: 'info@pelvfixpt.com',
+    // City-level only by design: no streetAddress, geo, or priceRange
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'South Brunswick',
+      addressRegion: 'NJ',
+      addressCountry: 'US',
+    },
     areaServed: [
       {
         '@type': 'AdministrativeArea',
         name: 'Middlesex County, NJ',
       },
       {
-        '@type': 'City',
-        name: 'South Brunswick, NJ',
-      },
-      {
         '@type': 'AdministrativeArea',
         name: 'Central New Jersey',
       },
+      ...SERVICE_AREA_TOWNS.map((town) => ({
+        '@type': 'City',
+        name: `${town}, NJ`,
+      })),
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -111,9 +123,7 @@ export function generatePersonSchema() {
     image: `${BASE_URL}/doctor.jpg`,
     url: `${BASE_URL}/about`,
     worksFor: {
-      '@type': 'Organization',
-      name: BUSINESS_NAME,
-      url: BASE_URL,
+      '@id': `${BASE_URL}/#organization`,
     },
     alumniOf: {
       '@type': 'CollegeOrUniversity',
@@ -158,10 +168,12 @@ export function generateFAQPageSchema() {
 }
 
 export function generateReviewSchema() {
+  // Shares the org node's @id so the graph merges into a single entity;
+  // the lone aggregateRating lives on the org node in the root layout.
   return {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${BASE_URL}/#reviews`,
+    '@type': ['MedicalBusiness', 'Physiotherapy'],
+    '@id': `${BASE_URL}/#organization`,
     name: BUSINESS_NAME,
     review: TESTIMONIAL_DATA.map((testimonial) => ({
       '@type': 'Review',
@@ -177,12 +189,5 @@ export function generateReviewSchema() {
       },
       reviewBody: testimonial.review,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: TESTIMONIAL_DATA.length.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 }

@@ -40,16 +40,25 @@ const AccordionTrigger = React.forwardRef<
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
+// forceMount keeps closed content in the server HTML for crawlers. The
+// open/close animation lives on a child element as a grid-rows transition:
+// Radix disables transitions on the Content node itself while measuring,
+// and its height-based keyframes break when content stays mounted.
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount
+    className="group text-sm"
     {...props}
   >
-    <div className={cn('pb-4 pt-0', className)}>{children}</div>
+    <div className="grid grid-rows-[0fr] group-data-[state=open]:grid-rows-[1fr] group-data-[state=closed]:invisible transition-[grid-template-rows,visibility] duration-200 ease-out">
+      <div className="overflow-hidden min-h-0">
+        <div className={cn('pb-4 pt-0', className)}>{children}</div>
+      </div>
+    </div>
   </AccordionPrimitive.Content>
 ));
 

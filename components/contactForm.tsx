@@ -131,9 +131,9 @@ export default function ContactForm() {
         <div className="flex flex-col h-full items-center space-y-4 animate-slide-down">
           <CheckCircleIcon className="text-emerald-500 w-16 h-16" />
           <div>
-            <h1 className="text-pretty text-center text-xl text-primary tracking-tighter mt-2">
+            <p className="text-pretty text-center text-xl text-primary tracking-tighter mt-2">
               Your message has been sent!
-            </h1>
+            </p>
             <p>I will get back to you within 24 hours</p>
           </div>
           <Button asChild className="w-44 mt-4">

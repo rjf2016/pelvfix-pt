@@ -105,6 +105,22 @@ export const TREATMENTS = [
   'General nutrition information',
 ];
 
+export const SERVICE_AREA_TOWNS = [
+  'South Brunswick',
+  'North Brunswick',
+  'East Brunswick',
+  'Monroe Township',
+  'Plainsboro',
+  'Cranbury',
+  'Princeton',
+  'Edison',
+  'Milltown',
+  'Pennington',
+  'Hillsborough',
+  'Rocky Hill',
+  'Hopewell',
+];
+
 export const FAQS = [
   {
     id: '1',
