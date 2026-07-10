@@ -109,17 +109,16 @@ export const SERVICE_AREA_TOWNS = [
   'South Brunswick',
   'North Brunswick',
   'East Brunswick',
-  'New Brunswick',
   'Monroe Township',
   'Plainsboro',
   'Cranbury',
   'Princeton',
   'Edison',
-  'Old Bridge',
   'Milltown',
-  'Sayreville',
-  'Woodbridge',
-  'Highland Park',
+  'Pennington',
+  'Hillsborough',
+  'Rocky Hill',
+  'Hopewell',
 ];
 
 export const FAQS = [
