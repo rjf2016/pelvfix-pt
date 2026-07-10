@@ -22,6 +22,7 @@ export default function Footer() {
             <a
               href={SOCIAL_LINKS.facebook}
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:opacity-80 p-1.5 rounded-lg bg-white shadow"
             >
               <Image
@@ -33,6 +34,7 @@ export default function Footer() {
             <a
               href={SOCIAL_LINKS.instagram}
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:opacity-80 p-1.5 rounded-lg bg-white shadow"
             >
               <Image
@@ -44,6 +46,7 @@ export default function Footer() {
             <a
               href={SOCIAL_LINKS.tiktok}
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:opacity-80 p-1.5 rounded-lg bg-white shadow"
             >
               <Image src={TiktokIcon} alt="TikTok logo" className="h-6 w-6" />
@@ -74,7 +77,8 @@ export default function Footer() {
 
         <div className="w-full py-2">
           <p className="text-center text-xs md:text-sm">
-            &copy; 2026 PelvFix PT. All Rights Reserved
+            &copy; {new Date().getFullYear()} PelvFix Physical Therapy. All
+            Rights Reserved
           </p>
         </div>
       </div>

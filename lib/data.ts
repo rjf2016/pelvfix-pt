@@ -105,6 +105,23 @@ export const TREATMENTS = [
   'General nutrition information',
 ];
 
+export const SERVICE_AREA_TOWNS = [
+  'South Brunswick',
+  'North Brunswick',
+  'East Brunswick',
+  'New Brunswick',
+  'Monroe Township',
+  'Plainsboro',
+  'Cranbury',
+  'Princeton',
+  'Edison',
+  'Old Bridge',
+  'Milltown',
+  'Sayreville',
+  'Woodbridge',
+  'Highland Park',
+];
+
 export const FAQS = [
   {
     id: '1',
@@ -163,7 +180,11 @@ export const FAQS = [
     id: '8',
     question: 'What areas do you serve?',
     answer: [
-      'We provide in-home physical therapy services to patients in Middlesex County, and surrounding areas (approximately 30 minutes from South Brunswick, NJ). If you are outside of our service area, feel free to reach out to see if we can accommodate your location.',
+      `We provide in-home pelvic floor physical therapy throughout Middlesex County and nearby Central NJ communities — typically within about 30 minutes of South Brunswick. That includes ${SERVICE_AREA_TOWNS.slice(
+        0,
+        -1
+      ).join(', ')}, and ${SERVICE_AREA_TOWNS[SERVICE_AREA_TOWNS.length - 1]}.`,
+      "A little outside this area? Reach out anyway — we'll do our best to accommodate your location.",
     ],
   },
   {

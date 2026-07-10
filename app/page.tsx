@@ -41,10 +41,10 @@ export default function Home() {
         <div className="container py-12 px-6 md:px-8 flex flex-col items-center justify-center gap-y-8 min-h-[65vh] lg:min-h-[50vh]">
           <div className="text-center w-full max-w-md md:max-w-lg lg:max-w-2xl z-20">
             <h1 className="text-4xl md:text-6xl lg:text-7xl text-balance text-primary font-serif">
-              Pelvic Floor Rehab & Wellness
+              In-Home Pelvic Floor Physical Therapy
             </h1>
             <p className="text-pretty text-center md:text-lg mt-4 mb-6 max-w-[384px] mx-auto">
-              One on one, personalized pelvic floor physical therapy in the
+              One-on-one, personalized care for your pelvic floor — in the
               comfort of your home. Serving Middlesex County and Central NJ.
             </p>
             <Button size={'lg'} className="w-full max-w-40" asChild>
@@ -158,9 +158,30 @@ export default function Home() {
         {/* Conditions Section */}
         <section className="space-y-6 py-12">
           <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
-            What We Treat
+            What We Treat with Pelvic Floor Physical Therapy
           </h2>
           <Services />
+        </section>
+
+        {/* Service Area Section */}
+        <section className="space-y-4 py-6 text-center">
+          <h2 className="text-2xl md:text-3xl text-primary tracking-tight font-medium">
+            In-Home Visits Across Middlesex County
+          </h2>
+          <p className="leading-relaxed lg:text-lg max-w-3xl mx-auto">
+            PelvFix brings pelvic floor physical therapy to your door
+            throughout Middlesex County and Central NJ — including South
+            Brunswick, North Brunswick, East Brunswick, New Brunswick, Monroe,
+            Plainsboro, Edison, and Princeton. Wondering if we cover your
+            town?{' '}
+            <Link
+              href={'/faqs'}
+              className="underline underline-offset-2 text-primary hover:text-primary/80"
+            >
+              See our full service area
+            </Link>
+            .
+          </p>
         </section>
 
         {/* Testimonials Section */}

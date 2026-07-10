@@ -14,6 +14,9 @@ export default function ContactPage() {
   return (
     <div className="container flex flex-col px-6 py-12 md:py-16">
       <div className="max-w-lg w-full mx-auto">
+        <h1 className="text-2xl text-primary font-medium tracking-tight text-center">
+          Book Your In-Home Pelvic Floor Physical Therapy Visit
+        </h1>
         <ContactForm />
       </div>
     </div>

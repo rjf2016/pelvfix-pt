@@ -57,11 +57,14 @@ const Services = memo(() => {
             </TabsTrigger>
           ))}
         </TabsList>
+        {/* forceMount keeps every panel in the server HTML for crawlers;
+            inactive panels are hidden with CSS instead of unmounted */}
         {memoizedTabData.map((tab) => (
           <TabsContent
             key={tab.title}
             value={tab.title}
-            className="p-10 mt-0 leading-relaxed lg:text-lg rounded-xl"
+            forceMount
+            className="p-10 mt-0 leading-relaxed lg:text-lg rounded-xl data-[state=inactive]:hidden"
           >
             {tab.content}
           </TabsContent>
